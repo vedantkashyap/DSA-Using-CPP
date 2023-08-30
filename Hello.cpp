@@ -19,6 +19,8 @@ int main(){
     // cout<<d;
     // cout<<endl<<*c<<endl<<c;
     // cout<<"THE END";
-
+int x;
+cin>>x;
+cout<<x+10<<endl;
     cout<<9/2;
 }
