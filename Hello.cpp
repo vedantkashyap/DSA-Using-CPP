@@ -1,26 +1,36 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int add(int *a, int *b, int *c) {
-    *c = *a+*b;
+int add(int *a, int *b, int *c)
+{
+    *c = *a + *b;
     return *c;
 }
 
-int main(){
-    // int num1,num2;
-    // cin>>num1>>num2;
-    // int *a=&num1,*b=&num2;
-    
-    // cout<<"THE END";
 
-    // int *c;
-    // add(a,b,c);
-    // int d=add(a,b,c);
-    // cout<<d;
-    // cout<<endl<<*c<<endl<<c;
-    // cout<<"THE END";
-int x;
-cin>>x;
-cout<<x+10<<endl;
-    cout<<9/2;
+    int timeRequiredToBuy(vector<int> & tickets, int k)
+    {
+        int time = 0;
+        while (!tickets[k] == 0)
+        {
+            for (int i = 0; i < tickets.size(); i++)
+            {
+                if (tickets[i] > 0)
+                {
+                    tickets[i] = tickets[i] - 1;
+                    time++;
+                }
+            }
+        }
+        return time;
+    }
+int main()
+{
+
+
+
+    vector<int> tickets = {84, 49, 5, 24, 70, 77, 87, 8};
+    cout<<timeRequiredToBuy(tickets,3);
+
+    
 }
